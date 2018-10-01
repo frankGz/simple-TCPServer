@@ -200,6 +200,7 @@ public class Worker extends Thread{
 	private void punch(String string) throws UnknownHostException {
 		// None. The given ip is added to the firewall's whitelist
 		InetAddress address = InetAddress.getByName(string);
+		whiteList.add(address);
 		System.out.println("adding address: " + address.toString()); 
 	}
 
